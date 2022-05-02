@@ -1,3 +1,6 @@
+tags
+.nfs*
+
 # Prerequisites
 *.d
 

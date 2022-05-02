@@ -2,12 +2,14 @@ OBJ_DIR = bin/
 INC_DIR = includes/
 SRC_DIR = srcs/
 
-SRCS = phoneBook.cpp contact.cpp
+SRCS = PhoneBook.cpp Contact.cpp main.cpp
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.cpp=.o))
 
-NAME = phoneBook
+NAME = PhoneBook
 
-CPPFLAGS = -Wall -Werror -Wextra
+CPPFLAGS = -Wall -Werror -Wextra -std=c++98
+INCPATH = -I$(INC_DIR)
+
 CC = g++
 
 all: $(NAME)
@@ -15,8 +17,8 @@ all: $(NAME)
 $(NAME) : $(OBJ_DIR) $(OBJS)
 	$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
-$(OBJ_DIR)%.o : %.cpp
-	$(CC) $(CPPFLAGS) -c $< -o $@
+$(OBJ_DIR)%.o : $(SRC_DIR)%.cpp
+	$(CC) $(CPPFLAGS) $(INCPATH) -c $< -o $@
 
 $(OBJ_DIR) :
 	@mkdir -p $(OBJ_DIR)
