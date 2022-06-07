@@ -1,11 +1,11 @@
 OBJ_DIR = bin/
 INC_DIR = includes/
-SRC_DIR = srcs/
+SRC_DIR = src/
 
-SRCS = Zombie.cpp main.cpp zombieHorde.cpp 
+SRCS = main.cpp 
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.cpp=.o))
 
-NAME = Horde 
+NAME = replace 
 
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 INCPATH = -I$(INC_DIR)
