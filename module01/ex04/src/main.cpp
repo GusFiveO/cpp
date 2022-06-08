@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/08 12:47:40 by alorain           #+#    #+#             */
+/*   Updated: 2022/06/08 18:21:12 by alorain          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <fstream>
 
@@ -9,13 +21,8 @@ void	fillReplaceFile(std::fstream & newFile, std::fstream & file, char *s1, char
 	std::string str1 = s1;
 	std::string str2 = s2;
 
-	(void)s1;
-	(void)s2;
-	(void)newFile;
-	std::cout << s1 << "," << s2 << std::endl;
 	while (std::getline(file, buffer))
 	{
-		std::cout << buffer << std::endl;
 		if (buffer.find(s1) == std::string::npos)
 			 newFile << buffer << std::endl;
 		else
@@ -50,7 +57,7 @@ int main(int argc, char **argv)
 	}
 	newFilename = argv[3];
 	newFilename.append(".replace");
-	replaceFile.open(newFilename,  std::ios::out);
+	replaceFile.open(newFilename.data(),  std::ios::out);
 	fillReplaceFile(replaceFile, file, argv[1], argv[2]);
 	file.close();
 	replaceFile.close();
