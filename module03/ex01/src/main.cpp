@@ -5,6 +5,7 @@ int main(void)
 {
 	ScavTrap bob("Bob");
 
+	bob.guardGate();
 	for (int i = 0; i < 11; i++)
 		bob.attack("Eric");
 	for (int i = 0; i < 10; i++)

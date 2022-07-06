@@ -2,10 +2,10 @@ OBJ_DIR = bin/
 INC_DIR = include/
 SRC_DIR = src/
 
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp 
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FlagTrap.cpp 
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.cpp=.o))
 
-NAME = ScavTrap
+NAME = FragTrap
 
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 INCPATH = -I$(INC_DIR)
