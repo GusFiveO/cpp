@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 16:28:20 by alorain           #+#    #+#             */
-/*   Updated: 2022/05/02 18:13:57 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/07 15:14:37 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 		std::cout << "Too much args !" << std::endl; 
 		return 0;
 	}
-	while (1)
+	while (std::cin)
 	{
 		std::getline(std::cin, buff);
 		input = buff;

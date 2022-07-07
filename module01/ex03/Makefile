@@ -10,7 +10,7 @@ NAME = Violence
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 INCPATH = -I$(INC_DIR)
 
-CC = g++
+CC = c++
 
 all: $(NAME)
 

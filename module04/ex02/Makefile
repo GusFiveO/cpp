@@ -1,13 +1,13 @@
 OBJ_DIR = bin/
-INC_DIR = includes/
+INC_DIR = include/
 SRC_DIR = src/
 
-SRCS = main.cpp 
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.cpp=.o))
 
-NAME = replace 
+NAME = Animal
 
-CPPFLAGS = -Wall -Werror -Wextra -std=c++98
+CPPFLAGS = -Wall -Werror -Wextra -std=c++98 -Wshadow -g 
 INCPATH = -I$(INC_DIR)
 
 CC = c++

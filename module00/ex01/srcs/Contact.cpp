@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 14:37:04 by alorain           #+#    #+#             */
-/*   Updated: 2022/05/02 19:01:34 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/07 18:46:47 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,14 +154,29 @@ void	Contact::PrintInfo()
 
 void	Contact::CreateContact()
 {
-	std::cout << "First Name :";
-	std::getline(std::cin, this->Firstname);
-	std::cout << "Last Name :";
-	std::getline(std::cin, this->Lastname);
-	std::cout << "Nick Name :";
-	std::getline(std::cin, this->Nickname);
-	std::cout << "Phone Number :";
-	std::getline(std::cin, this->PhoneNumber);
-	std::cout << "Darkest Secret :";
-	std::getline(std::cin, this->DarkestSecret);
+	while (this->Firstname.empty())
+	{
+		std::cout << "First Name :";
+		std::getline(std::cin, this->Firstname);
+	}
+	while (this->Lastname.empty())
+	{
+		std::cout << "Last Name :";
+		std::getline(std::cin, this->Lastname);
+	}
+	while (this->Nickname.empty())
+	{
+		std::cout << "Nick Name :";
+		std::getline(std::cin, this->Nickname);
+	}
+	while (this->PhoneNumber.empty())
+	{
+		std::cout << "Phone Number :";
+		std::getline(std::cin, this->PhoneNumber);
+	}
+	while (this->DarkestSecret.empty())
+	{
+		std::cout << "Darkest Secret :";
+		std::getline(std::cin, this->DarkestSecret);
+	}
 }

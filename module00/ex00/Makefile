@@ -5,8 +5,8 @@ OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.cpp=.o))
 
 NAME = megaphone
 
-CPPFLAGS = -Wall -Werror -Wextra
-CC = g++
+CPPFLAGS = -Wall -Werror -Wextra -std=c++98
+CC = c++
 
 all: $(NAME)
 
