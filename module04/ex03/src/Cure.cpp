@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 14:20:19 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/08 14:54:02 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/08 20:11:45 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ Cure::Cure(void) {
 }
 
 Cure::Cure(const Cure & copy) {
+	(void)copy;
 	this->_type = "cure";
 	std::cout << "Cure copy constructor called" << std::endl;
 }
@@ -35,9 +36,9 @@ AMateria * Cure::clone(void) const {
 	return cureClone;
 }
 
-//void Cure use(ICharacter & target) {
-//	if (this->type == "ice")
-//		std::cout << "* shoots an ice ball at " << target.getName() + " *" << std::endl;
-//	else if (this->type == "cure")
-//		std::cout << "* heals " << target.getName() + "'s wonds *" << std::endl;
-//}
+void Cure use(ICharacter & target) {
+	if (this->type == "ice")
+		std::cout << "* shoots an ice ball at " << target.getName() + " *" << std::endl;
+	else if (this->type == "cure")
+		std::cout << "* heals " << target.getName() + "'s wonds *" << std::endl;
+}

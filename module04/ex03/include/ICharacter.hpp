@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 14:14:02 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/08 14:18:56 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/08 18:27:45 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define ICHARACTER_HPP
 
 # include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {

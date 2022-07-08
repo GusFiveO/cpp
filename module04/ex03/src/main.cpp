@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/08 12:50:05 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/08 17:45:14 by alorain          ###   ########.fr       */
+/*   Created: 2022/07/08 17:21:44 by alorain           #+#    #+#             */
+/*   Updated: 2022/07/08 17:37:32 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CURE_HPP
-# define CURE_HPP
+#include "Cure.hpp"
+#include "Ice.hpp"
+#include "Character.hpp"
 
-# include "AMateria.hpp"
-# include "ICharacter.hpp"
+int main(void)
+{
+	Character * remi = new Character("minigeek");
 
-class Cure : public AMateria {
-	protected :
-	public :
-		Cure(void);
-		Cure(const Cure & copy);
-		~Cure(void);
-		std::string const & getType(void) const;
-
-		virtual Cure * clone(void) const = 0;
-		virtual void use(ICharacter & target);
-};
-
-#endif
+	delete remi;
+	return (0);
+}

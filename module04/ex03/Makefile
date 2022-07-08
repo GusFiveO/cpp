@@ -2,7 +2,7 @@ OBJ_DIR = bin/
 INC_DIR = include/
 SRC_DIR = src/
 
-SRCS = main.cpp 
+SRCS = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.cpp=.o))
 
 NAME = Interface 
