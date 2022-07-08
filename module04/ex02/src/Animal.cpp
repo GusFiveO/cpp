@@ -6,37 +6,37 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 18:00:58 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/06 18:51:30 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/08 12:36:16 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal(void) : _type("Default") {
-	std::cout << "Animal default constructor called" << std::endl;
+AAnimal::AAnimal(void) : _type("Default") {
+	std::cout << "AAnimal default constructor called" << std::endl;
 }
 
-Animal::Animal(std::string type) : _type(type) {
-	std::cout << "Animal parameterized constructor called" << std::endl;
+AAnimal::AAnimal(std::string type) : _type(type) {
+	std::cout << "AAnimal parameterized constructor called" << std::endl;
 }
 
-Animal::Animal(const Animal & copy) : _type(copy._type) {
-	std::cout << "Animal parameterized constructor called" << std::endl;
+AAnimal::AAnimal(const AAnimal & copy) : _type(copy._type) {
+	std::cout << "AAnimal parameterized constructor called" << std::endl;
 }
 
-Animal::~Animal(void) {
+AAnimal::~AAnimal(void) {
 	std::cout << "Default destructor called" << std::endl;
 }
 
-const Animal & Animal::operator=(const Animal & assign) {
+const AAnimal & AAnimal::operator=(const AAnimal & assign) {
 	this->_type = assign._type;
 	return *this;
 }
 
-void Animal::makeSound(void) const {
-	std::cout << "Animal sound" << std::endl;
+void AAnimal::makeSound(void) const {
+	std::cout << "AAnimal sound" << std::endl;
 }
 
-std::string Animal::getType(void) const {
+std::string AAnimal::getType(void) const {
 	return this->_type;
 }

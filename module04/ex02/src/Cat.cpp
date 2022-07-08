@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 18:17:38 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/07 18:22:38 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/08 12:38:30 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cat::Cat(void) {
 	std::cout << "Cat default constructor called" << std::endl;
 }
 
-Cat::Cat(const Cat & copy) : Animal(copy){
+Cat::Cat(const Cat & copy) : AAnimal(copy){
 	this->_brain = new Brain(*copy._brain);
 	this->_type = copy._type;
 	std::cout << "Cat parameterized constructor called" << std::endl;
