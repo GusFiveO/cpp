@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 12:50:05 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/08 17:45:14 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/11 19:26:48 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,11 @@ class Cure : public AMateria {
 	public :
 		Cure(void);
 		Cure(const Cure & copy);
+		Cure(AMateria & copy);
 		~Cure(void);
 		std::string const & getType(void) const;
 
-		virtual Cure * clone(void) const = 0;
+		virtual Cure * clone(void) const;
 		virtual void use(ICharacter & target);
 };
 
