@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 12:28:21 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/12 15:43:26 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/12 16:44:50 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Bureaucrat::Bureaucrat(std::string name, unsigned int grade) : _name(name) {
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat & copy) : _name(copy._name), _grade(copy._grade){
+	std::cout << "Copy Bureaucrat constructor called" << std::endl;
 }
 
 Bureaucrat::~Bureaucrat(void) {
@@ -43,6 +44,15 @@ std::string Bureaucrat::getName(void) const {
 
 unsigned int Bureaucrat::getGrade(void) const {
 	return this->_grade;
+}
+
+void Bureaucrat::signForm(Form & form) {
+	try {form.beSigned(*this);}
+	catch (std::exception & e){
+		std::cout << this->_name << " can't sign " << form.getName() << " because his grade is too low" << std::endl;
+		return ;
+	}
+	std::cout << this->_name << " signed " << form.getName() << std::endl;
 }
 
 std::ostream & operator<<(std::ostream & o, const Bureaucrat & rhs) {

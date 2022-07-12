@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 12:05:24 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/12 15:42:45 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/12 16:37:37 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat {
 	private:
@@ -25,16 +28,19 @@ class Bureaucrat {
 		Bureaucrat(const Bureaucrat & copy);
 		~Bureaucrat(void);
 		const Bureaucrat &  operator=(const Bureaucrat & assign);
+
 		std::string getName(void) const;
 		unsigned int getGrade(void) const;
 
+		void signForm(Form & form);
+
 		class GradeTooHighException : public std::exception {
 			public:
-				virtual const char * what(void) const throw() {return "Can't instantiate grade too high";}
+				virtual const char * what(void) const throw() {return "Can't instantiate Bureaucrat grade too high";}
 		};
 		class GradeTooLowException : public std::exception {
 			public:
-				virtual const char * what(void) const throw() {return "Can't istantiate grade too low";}
+				virtual const char * what(void) const throw() {return "Can't instantiate Bureaucrat grade too low";}
 		};
 };
 
