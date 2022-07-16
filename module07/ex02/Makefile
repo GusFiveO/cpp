@@ -2,7 +2,7 @@ OBJ_DIR = bin/
 INC_DIR = include/
 SRC_DIR = src/
 
-SRCS = main.cpp Array.cpp
+SRCS = main.cpp
 
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.cpp=.o))
 
