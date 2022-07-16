@@ -6,7 +6,7 @@
 /*   By: augustinlorain <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 19:18:13 by augustinlorai     #+#    #+#             */
-/*   Updated: 2022/07/15 19:38:21 by augustinlorai    ###   ########.fr       */
+/*   Updated: 2022/07/16 16:38:57 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ T & Array<T>::operator[](size_t idx) {
 }
 
 template<typename T>
-Array<T> & Array<T>::operator=(T & assign) {
+Array<T> & Array<T>::operator=(Array<T> & assign) {
 	delete [] this->_tab;
 	this->_tab = new T[assign.size()];
 	this->_size = assign.size();
