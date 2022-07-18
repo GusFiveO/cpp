@@ -6,7 +6,7 @@
 /*   By: augustinlorain <marvin@42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 18:40:14 by augustinlorai     #+#    #+#             */
-/*   Updated: 2022/07/16 18:06:18 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/16 19:19:21 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <iostream>
 
-//template<class T>
 template<typename T>
 class Array {
 	private:
