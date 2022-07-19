@@ -1,5 +1,5 @@
 OBJ_DIR = bin/
-INC_DIR = includes/
+INC_DIR = include/
 SRC_DIR = src/
 
 SRCS = main.cpp 

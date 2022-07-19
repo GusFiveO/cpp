@@ -1,6 +1,6 @@
 OBJ_DIR = bin/
-INC_DIR = includes/
-SRC_DIR = srcs/
+INC_DIR = include/
+SRC_DIR = src/
 
 SRCS = Weapon.cpp main.cpp HumanA.cpp HumanB.cpp 
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.cpp=.o))

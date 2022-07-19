@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 12:47:40 by alorain           #+#    #+#             */
-/*   Updated: 2022/06/08 18:21:12 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/19 18:50:05 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,16 +49,16 @@ int main(int argc, char **argv)
 		std::cout << "Error in args." << std::endl;
 		return (1);
 	}
-	file.open(argv[3]);
+	file.open(argv[1]);
 	if (!file)
 	{
 		std::cout << "File doesn't exist." << std::endl;
 		return (1);
 	}
-	newFilename = argv[3];
+	newFilename = argv[1];
 	newFilename.append(".replace");
-	replaceFile.open(newFilename.data(),  std::ios::out);
-	fillReplaceFile(replaceFile, file, argv[1], argv[2]);
+	replaceFile.open(newFilename.data(), std::ios::out);
+	fillReplaceFile(replaceFile, file, argv[2], argv[3]);
 	file.close();
 	replaceFile.close();
 	return (0);
