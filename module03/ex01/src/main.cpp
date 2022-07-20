@@ -9,8 +9,8 @@ int main(void)
 	for (int i = 0; i < 11; i++)
 		bob.attack("Eric");
 	for (int i = 0; i < 10; i++)
-		bob.beRepaired(10);
-	for (int i = 0; i < 10; i++)
 		bob.takeDamage(10);
+	for (int i = 0; i < 10; i++)
+		bob.beRepaired(10);
 	return 0;
 }

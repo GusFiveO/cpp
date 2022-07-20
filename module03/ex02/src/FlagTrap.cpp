@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 16:45:35 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/05 17:33:20 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/20 16:22:47 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ FlagTrap::FlagTrap(void) {
 	this->_name = "Default";	
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
-	this->_attackDamages = 20;
+	this->_attackDamages = 30;
 	std::cout << "FlagTrap default constructor called" << std::endl;
 }
 
 FlagTrap::FlagTrap(std::string name) : ClapTrap(name) {
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
-	this->_attackDamages = 20;
+	this->_attackDamages = 30;
 	std::cout << "FragTrap parameterized constuctor called" << std::endl;
 }
 

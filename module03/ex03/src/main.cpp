@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 17:28:52 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/06 17:45:57 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/20 16:25:46 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int main(void)
 	for (int i = 0; i < 11; i++)
 		bob.attack("Eric");
 	for (int i = 0; i < 10; i++)
-		bob.beRepaired(10);
-	for (int i = 0; i < 10; i++)
 		bob.takeDamage(10);
+	for (int i = 0; i < 10; i++)
+		bob.beRepaired(10);
 	return 0;
 }
