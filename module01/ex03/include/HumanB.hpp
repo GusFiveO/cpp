@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 11:03:40 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/19 18:41:21 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/21 20:16:58 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class HumanB {
 		~HumanB( void );
 
 		void attack( void );
-		void setWeapon(Weapon weapon);
+		void setWeapon(Weapon &weapon);
 };
 
 #endif

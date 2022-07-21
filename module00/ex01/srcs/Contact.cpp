@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 14:37:04 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/07 18:46:47 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/21 16:27:56 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,27 +154,32 @@ void	Contact::PrintInfo()
 
 void	Contact::CreateContact()
 {
-	while (this->Firstname.empty())
+	this->Firstname.clear();
+	this->Lastname.clear();
+	this->Nickname.clear();
+	this->PhoneNumber.clear();
+	this->DarkestSecret.clear();
+	while (this->Firstname.empty() && std::cin)
 	{
 		std::cout << "First Name :";
 		std::getline(std::cin, this->Firstname);
 	}
-	while (this->Lastname.empty())
+	while (this->Lastname.empty() && std::cin)
 	{
 		std::cout << "Last Name :";
 		std::getline(std::cin, this->Lastname);
 	}
-	while (this->Nickname.empty())
+	while (this->Nickname.empty() && std::cin)
 	{
 		std::cout << "Nick Name :";
 		std::getline(std::cin, this->Nickname);
 	}
-	while (this->PhoneNumber.empty())
+	while (this->PhoneNumber.empty() && std::cin)
 	{
 		std::cout << "Phone Number :";
 		std::getline(std::cin, this->PhoneNumber);
 	}
-	while (this->DarkestSecret.empty())
+	while (this->DarkestSecret.empty() && std::cin)
 	{
 		std::cout << "Darkest Secret :";
 		std::getline(std::cin, this->DarkestSecret);

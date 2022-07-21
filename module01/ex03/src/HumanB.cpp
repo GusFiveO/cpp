@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 11:09:43 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/19 18:44:48 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/21 20:18:31 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ HumanB::HumanB(std::string name) : _name(name), _weapon(NULL) {}
 
 HumanB::~HumanB( void )
 {
-	if (_weapon)
-		delete _weapon;
 	std::cout << this->_name + ": destroyed" << std::endl;
 }
 
@@ -31,7 +29,7 @@ void HumanB::attack( void )
 	std::cout << this->_name + " attack with their " + this->_weapon->getType() << std::endl;
 }
 
-void HumanB::setWeapon(Weapon weapon)
+void HumanB::setWeapon(Weapon &weapon)
 {
-	_weapon = new Weapon(weapon.getType());
+	this->_weapon = &weapon;
 }
