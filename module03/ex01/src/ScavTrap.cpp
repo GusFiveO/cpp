@@ -24,7 +24,13 @@ ScavTrap::~ScavTrap(void) {
 }
 
 void ScavTrap::attack(const std::string & target) {
-	std::cout << "Scavtrap " << this->_name << " attacks " << target << " causing " << this->_attackDamages << " points of damages" << std::endl;
+	if (this->_energyPoints > 0)
+	{
+		this->_energyPoints--;
+		std::cout << "ScavTrap " << this->_name << " attacks " << target << " causing " << this->_attackDamages << " points of damages" << std::endl;
+	}
+	else
+		std::cout << "Energy level too low" << std::endl;
 }
 
 void ScavTrap::guardGate(void) const {

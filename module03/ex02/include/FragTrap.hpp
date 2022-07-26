@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FlagTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: alorain <alorain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 16:45:31 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/05 17:31:44 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/26 16:50:25 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 
 #include "ClapTrap.hpp"
 
-class FlagTrap : public ClapTrap {
+class FragTrap : public ClapTrap {
 	private :
 	public :
-		FlagTrap(void);
-		FlagTrap(std::string name);
-		FlagTrap(const FlagTrap & copy);
-		~FlagTrap(void);
+		FragTrap(void);
+		FragTrap(std::string name);
+		FragTrap(const FragTrap & copy);
+		~FragTrap(void);
 		void highFivesGuys(void) const;
-		const FlagTrap & operator=(const FlagTrap & assign);
+		const FragTrap & operator=(const FragTrap & assign);
 
 };
 

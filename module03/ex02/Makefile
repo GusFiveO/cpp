@@ -2,7 +2,7 @@ OBJ_DIR = bin/
 INC_DIR = include/
 SRC_DIR = src/
 
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FlagTrap.cpp 
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp 
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.cpp=.o))
 
 NAME = FragTrap

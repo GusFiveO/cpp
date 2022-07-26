@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: alorain <alorain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 14:59:19 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/06 14:59:20 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/26 16:56:48 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,13 @@ ScavTrap::~ScavTrap(void) {
 }
 
 void ScavTrap::attack(const std::string & target) {
-	std::cout << "Scavtrap " << this->_name << " attacks " << target << " causing " << this->_attackDamages << " points of damages" << std::endl;
+	if (this->_energyPoints > 0)
+	{
+		this->_energyPoints--;
+		std::cout << "ScavTrap " << this->_name << " attacks " << target << " causing " << this->_attackDamages << " points of damages" << std::endl;
+	}
+	else
+		std::cout << "Energy level too low" << std::endl;
 }
 
 void ScavTrap::guardGate(void) const {

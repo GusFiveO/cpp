@@ -6,7 +6,7 @@
 /*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 14:19:39 by alorain           #+#    #+#             */
-/*   Updated: 2022/06/24 18:56:28 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/25 14:43:56 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Fixed::Fixed(void) : nb(0){
 
 Fixed::Fixed(Fixed const & src) {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = src;
+	this->nb = src.nb;
 }
 
 Fixed::~Fixed() {

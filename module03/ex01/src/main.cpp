@@ -10,7 +10,7 @@ int main(void)
 		bob.attack("Eric");
 	for (int i = 0; i < 10; i++)
 		bob.takeDamage(10);
-	for (int i = 0; i < 10; i++)
-		bob.beRepaired(10);
+	for (int i = 0; i < 42; i++)
+		bob.beRepaired(1);
 	return 0;
 }

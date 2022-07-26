@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alorain <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: alorain <alorain@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 17:28:52 by alorain           #+#    #+#             */
-/*   Updated: 2022/07/20 16:25:46 by alorain          ###   ########.fr       */
+/*   Updated: 2022/07/26 16:56:12 by alorain          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main(void)
 		bob.attack("Eric");
 	for (int i = 0; i < 10; i++)
 		bob.takeDamage(10);
-	for (int i = 0; i < 10; i++)
-		bob.beRepaired(10);
+	for (int i = 0; i < 40; i++)
+		bob.beRepaired(1);
 	return 0;
 }
